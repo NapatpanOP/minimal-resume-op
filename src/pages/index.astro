@@ -1,18 +1,25 @@
 ---
 import { Image } from 'astro:assets';
-import Layout from '../layouts/Layout.astro';
 import profile from '../images/profile.jpg';
+import About from '../components/About.astro';
+import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Resume Napatpan">
 	<div class="flex gap-24 text-gray-2">
-		<div class="bg-gray-1 w-full max-w-[420px] h-screen py-16">
-			<Image src={profile} alt="profile image" class="w-[242px] rounded-full border-2 border-white-1 mx-auto"/>
+		<div class="bg-gray-1 w-full max-w-[420px] py-16">
+			<Image src={profile} alt="profile image" class="w-[242px] rounded-full border-2 border-white-1 mx-auto mb-8"/>
+			<div class="pl-24">
+				<About />
+			</div>
 		</div>
 		<div class="py-16 pr-4 w-full">
 			<h1 class="text-6xl text-gray-1 font-bold mb-4">Napatpan Sae-ngow</h1>
 			<div class="uppercase text-3xl mb-4">software engineer</div>
-			<p class="max-w-[812px]">My name is Napatpan Sae-ngow. I’m graduated from King Mongkut's Institute of Technology Ladkrabang. My faculty is Bachelor of Science Program majoring in Computer Science. I'm interested in website design and development. Moreover, I have some experience in designing and building websites but I still want to gain knowledge to develop my skills and improve my skills to become more advance.</p>
+			<p class="max-w-[812px] mb-12">My name is Napatpan Sae-ngow. I’m graduated from King Mongkut's Institute of Technology Ladkrabang. My faculty is Bachelor of Science Program majoring in Computer Science. I'm interested in website design and development. Moreover, I have some experience in designing and building websites but I still want to gain knowledge to develop my skills and improve my skills to become more advance.</p>
+			<div class="text-gray-1 border-b border-gray-1 mb-8 max-w-[812px]">
+				<h2 class="uppercase text-xl mb-4">work experience</h2>
+			</div>
 		</div>
 	</div>
 </Layout>
