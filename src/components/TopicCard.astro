@@ -1,0 +1,27 @@
+---
+const { title } = Astro.props
+
+let background = ''
+
+switch (title) {
+  case 'Contact' :
+    background = 'bg-cream-3'
+    break;
+  case 'Education' :
+    background = 'bg-green-2'
+    break;
+  case 'Work Experience' :
+    background = 'bg-green-3'
+    break;
+  case 'Programming Languages' :
+    background = 'bg-cream-4'
+    break;
+  case 'Soft Skill' :
+    background = 'bg-cream-2'
+    break;
+}
+---
+
+<div class={`text-2xl font-bold relative z-0 w-max mx-auto mb-8 text-center shadow-2xl before:${background} before:content-[''] before:h-[8px] before:absolute before:-z-[1] before:bottom-[2px] before:w-full before:mx-auto before:flex`}>
+  <h2>{title}</h2>
+</div>
