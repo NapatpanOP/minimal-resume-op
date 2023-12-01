@@ -1,11 +1,13 @@
 ---
 ---
 
-<label class="toggle">
-  <input type="checkbox" id="pageToggle">
-  <span class="slider round" id="slider"></span>
-</label>
-<div class="text-gray-3 text-sm">See my previous version</div>
+<div class="flex flex-col items-end">
+  <label class="toggle">
+    <input type="checkbox" id="pageToggle">
+    <span class="slider round" id="slider"></span>
+  </label>
+  <div class="text-gray-3 text-sm w-[160px]">See my previous version</div>
+</div>
 
 <style>
   .toggle {
@@ -29,7 +31,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #403D39;
+    background-color: #74726f;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -46,11 +49,11 @@
   }
   
   input:checked + .slider {
-    background-color: #A5A58D;
+    background-color: #c17746;
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px #A5A58D;
+    box-shadow: 0 0 1px #c17746;
   }
   
   input:checked + .slider:before {

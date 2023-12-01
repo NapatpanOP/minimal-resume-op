@@ -10,11 +10,11 @@ import Toggle from '../../components/Toggle.astro';
   <div class="grid grid-cols-[50px_1fr]">
     <div class="bg-green-1"></div>
     <div class="gird mb-20">
-      <div class="flex flex-wrap gap-8 max-w-[810px] pl-6 py-14 md:pl-8 lg:pl-12 lg:flex-nowrap">
+      <div class="flex flex-wrap gap-8 max-w-[810px] pl-6 pt-28 pb-14 sm:flex-nowrap md:pl-8 lg:pl-12 lg:flex-nowrap">
         <Image src={profile} alt="profile image" class="max-w-[270px] h-[400px] object-cover rounded-tl-[30px] rounded-br-[30px] shadow-2xl"/>
         <div class="max-w-[450px] text-gray-5 flex flex-col justify-center pr-4">
-          <h1 class="text-[40px] text-purple-1 font-bold leading-[3rem] max-w-[200px]">Napatpan Sae-ngow</h1>
-          <div class="hidden items-center after:content[''] after:bg-green-1 after:h-[16px] after:absolute after:right-0 after:left-[350px] after:mt-[5px] sm:flex md:after:left-[650px]">
+          <h1 class="text-5xl text-purple-1 font-bold leading-[3.25rem] max-w-[300px]">Napatpan Sae-ngow</h1>
+          <div class="hidden items-center after:content[''] after:bg-green-1 after:h-[16px] after:absolute after:right-0 after:mt-[5px] sm:flex sm:after:left-[605px]">
             <h3 class="text-2xl font-medium my-4">Software Engineer</h3>
           </div>
           <p class="max-w-[390px]">My name is Napatpan Sae-ngow. I’m studying at King Mongkut's Institute of Technology Ladkrabang. My faculty is Bachelor of Science Program majoring in Computer Science. I'm interested in website design and development. Moreover, I have some experience in designing and building websites but I still want to gain knowledge to develop my skills and improve my skills to become more advance.</p>
@@ -25,9 +25,9 @@ import Toggle from '../../components/Toggle.astro';
         <EarthToneCard />
       </div>
 
-      <div class="pr-8 flex flex-col items-end mt-12 max-w-[812px]">
-        <Toggle />
-      </div>
+    </div>
+    <div class="pr-8 absolute right-0 mt-6">
+      <Toggle />
     </div>
   </div>
 </EarthTone>

@@ -8,14 +8,14 @@ import Toggle from '../components/Toggle.astro';
 ---
 
 <Minimal title="Resume Napatpan">
-	<div class="flex flex-wrap gap-12 text-gray-2 sm:flex-nowrap lg:gap-24">
-		<div class="bg-gray-1 w-full py-16 sm:max-w-[420px]">
+	<div class="flex flex-wrap-reverse text-gray-2 sm:gap-16 sm:flex-nowrap lg:gap-24">
+		<div class="bg-gray-1 w-full pt-16 pb-16 sm:pt-28 sm:max-w-[420px]">
 			<Image src={profile} alt="profile image" class="w-[200px] rounded-full border-2 border-white-1 mx-auto mb-8 lg:w-[242px]"/>
 			<div class="pl-20 sm:pl-10 md:pl-20 lg:pl-24">
 				<About />
 			</div>
 		</div>
-		<div class="py-16 px-8 w-full sm:pl-0 sm:pr-8">
+		<div class="pt-28 pb-16 px-8 w-full sm:pl-0 sm:pr-8">
 			<h1 class="text-5xl text-gray-1 font-bold mb-4 lg:text-6xl">Napatpan Sae-ngow</h1>
 			<div class="uppercase text-3xl mb-4">software engineer</div>
 			<p class="max-w-[812px] mb-12">My name is Napatpan Sae-ngow. I’m graduated from King Mongkut's Institute of Technology Ladkrabang. My faculty is Bachelor of Science Program majoring in Computer Science. I'm interested in website design and development. Moreover, I have some experience in designing and building websites but I still want to gain knowledge to develop my skills and improve my skills to become more advance.</p>
@@ -23,7 +23,7 @@ import Toggle from '../components/Toggle.astro';
 				<h2 class="uppercase text-xl mb-4">work experience</h2>
 			</div>
 			<Work />
-			<div class="flex flex-col items-end mt-12 max-w-[812px]">
+			<div class="pr-8 absolute right-0 top-0 mt-6">
 				<Toggle />
 			</div>
 		</div>
