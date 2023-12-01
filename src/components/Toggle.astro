@@ -1,97 +1,92 @@
 ---
 ---
 
-<astro-fragment>
-  <div class="flex flex-col items-end mt-12 max-w-[812px]">
-    <label class="toggle">
-      <input type="checkbox" id="pageToggle">
-      <span class="slider round" id="slider"></span>
-    </label>
-    <div class="text-gray-3 text-sm">See my previous version</div>
-  </div>
+<label class="toggle">
+  <input type="checkbox" id="pageToggle">
+  <span class="slider round" id="slider"></span>
+</label>
+<div class="text-gray-3 text-sm">See my previous version</div>
 
-  <style>
-    .toggle {
-      position: relative;
-      display: inline-block;
-      width: 60px;
-      height: 34px;
-      margin-bottom: 0.5rem;
-    }
-    
-    .toggle input { 
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-    
-    .slider {
-      position: absolute;
-      cursor: pointer;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: #403D39;
-      -webkit-transition: .4s;
-      transition: .4s;
-    }
-    
-    .slider:before {
-      position: absolute;
-      content: "";
-      height: 26px;
-      width: 26px;
-      left: 4px;
-      bottom: 4px;
-      background-color: #FFFCF2;
-      transition: .4s;
-    }
-    
-    input:checked + .slider {
-      background-color: #A5A58D;
-    }
-    
-    input:focus + .slider {
-      box-shadow: 0 0 1px #A5A58D;
-    }
-    
-    input:checked + .slider:before {
-      -webkit-transform: translateX(26px);
-      -ms-transform: translateX(26px);
-      transform: translateX(26px);
-    }
-    
-    /* Rounded sliders */
-    .slider.round {
-      border-radius: 34px;
-    }
-    
-    .slider.round:before {
-      border-radius: 50%;
-    }
-  </style>
+<style>
+  .toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .toggle input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #403D39;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #FFFCF2;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #A5A58D;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #A5A58D;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+</style>
 
-  <script>
-    const checkbox = document.getElementById('pageToggle');
+<script>
+  const checkbox = document.getElementById('pageToggle');
 
-    checkbox.addEventListener('change', () => {
-      if (checkbox.checked) {
-        localStorage.setItem('isChecked', 'true');
-        location.href = '/earthtone';
-      } else {
-        localStorage.setItem('isChecked', 'false');
-        location.href = '/';
-      }
-    });
+  checkbox.addEventListener('change', () => {
+    if (checkbox.checked) {
+      localStorage.setItem('isChecked', 'true');
+      location.href = '/earthtone';
+    } else {
+      localStorage.setItem('isChecked', 'false');
+      location.href = '/';
+    }
+  });
 
-    window.onload = function() {
-      const isChecked = localStorage.getItem('isChecked');
-      if (isChecked === 'true') {
-        checkbox.checked = true;
-      } else {
-        checkbox.checked = false;
-      }
-    };
-  </script>
-</astro-fragment>
+  window.onload = function() {
+    const isChecked = localStorage.getItem('isChecked');
+    if (isChecked === 'true') {
+      checkbox.checked = true;
+    } else {
+      checkbox.checked = false;
+    }
+  };
+</script>
