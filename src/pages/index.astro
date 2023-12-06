@@ -2,12 +2,12 @@
 import { Image } from 'astro:assets';
 import profile from '../images/profile.jpg';
 import About from '../components/About.astro';
-import Minimal from '../layouts/Minimal.astro';
+import Layout from '../layouts/Layout.astro';
 import Work from '../components/Work.astro';
 import Toggle from '../components/Toggle.astro';
 ---
 
-<Minimal title="Resume Napatpan">
+<Layout title="Resume Napatpan">
 	<div class="flex flex-wrap-reverse text-gray-2 sm:gap-16 sm:flex-nowrap lg:gap-24">
 		<div class="bg-gray-1 w-full pt-16 pb-16 sm:pt-28 sm:max-w-[420px]">
 			<Image src={profile} alt="profile image" class="w-[200px] rounded-full border-2 border-white-1 mx-auto mb-8 lg:w-[242px]"/>
@@ -26,6 +26,9 @@ import Toggle from '../components/Toggle.astro';
 			<div class="pr-8 absolute right-0 top-0 mt-6">
 				<Toggle />
 			</div>
+			<!-- <div class="pr-8 absolute right-0 mt-6">
+				<Toggle />
+			</div> -->
 		</div>
 	</div>
-</Minimal>
+</Layout>

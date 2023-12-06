@@ -1,12 +1,12 @@
 ---
 import { Image } from 'astro:assets';
-import profile from '../../images/profileEarthTone.jpg'
-import EarthTone from '../../layouts/EarthTone.astro'
-import EarthToneCard from '../../components/EarthToneCard.astro'
+import profile from '../../images/profileEarthTone.jpg';
+import Layout from '../../layouts/Layout.astro';
+import EarthToneCard from '../../components/EarthToneCard.astro';
 import Toggle from '../../components/Toggle.astro';
 ---
 
-<EarthTone title="Resume Napatpan">
+<Layout title="Resume Napatpan">
   <div class="grid grid-cols-[50px_1fr]">
     <div class="bg-green-1"></div>
     <div class="gird mb-20">
@@ -30,4 +30,4 @@ import Toggle from '../../components/Toggle.astro';
       <Toggle />
     </div>
   </div>
-</EarthTone>
+</Layout>
