@@ -1,12 +1,14 @@
 ---
 ---
 
-<div class="flex flex-col items-end">
-  <label class="toggle">
-    <input type="checkbox" id="pageToggle">
-    <span class="slider round" id="slider"></span>
-  </label>
-  <div class="text-gray-3 text-sm w-[160px]">See my previous version</div>
+<div class="pr-8 absolute right-0 mt-6">
+  <div class="flex flex-col items-end">
+    <label class="toggle">
+      <input type="checkbox" id="pageToggle">
+      <span class="slider round" id="slider"></span>
+    </label>
+    <div class="text-gray-3 text-sm w-[160px]">See my previous version</div>
+  </div>
 </div>
 
 <style>
@@ -76,20 +78,15 @@
 
   checkbox.addEventListener('change', () => {
     if (checkbox.checked) {
-      localStorage.setItem('isChecked', 'true');
       location.href = '/earthtone';
     } else {
-      localStorage.setItem('isChecked', 'false');
       location.href = '/';
     }
   });
 
-  window.onload = function() {
-    const isChecked = localStorage.getItem('isChecked');
-    if (isChecked === 'true') {
-      checkbox.checked = true;
-    } else {
-      checkbox.checked = false;
-    }
-  };
+  if (location.pathname === '/earthtone') {
+    checkbox.checked = true;
+  } else {
+    checkbox.checked = false;
+}
 </script>

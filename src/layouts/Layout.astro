@@ -6,6 +6,8 @@ interface Props {
 const { title } = Astro.props;
 
 import { ViewTransitions } from 'astro:transitions';
+import Toggle from '../components/Toggle.astro'
+import { fade } from 'astro:transitions';
 ---
 
 <!doctype html>
@@ -18,7 +20,9 @@ import { ViewTransitions } from 'astro:transitions';
 		<title>{title}</title>
 		<ViewTransitions />
 	</head>
-	<body class="bg-white-1">
+	<body class="bg-white-1" transition:animate={fade({ duration: '0.4s' })}>
+		<!-- <Nav /> -->
+		<Toggle />
 		<slot />
 	</body>
 </html>
